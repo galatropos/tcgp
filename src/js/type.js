@@ -1,4 +1,8 @@
-const submit = document.getElementById("submit");
+import view from "../view/type.js"
+const init=(app)=>{
+  app.innerHTML=view
+
+  const submit = document.getElementById("submit");
 const name = document.getElementById("name");
 const money = document.getElementById("money");
 const table = document.getElementById("table");
@@ -11,7 +15,6 @@ const eliminar = ( {id} ) => {
     location.reload();
   };
 
-  
 Object.keys(typeObject).forEach((name) => {
   const money = typeObject[name];
   const textName = document.createTextNode(name);
@@ -19,7 +22,6 @@ Object.keys(typeObject).forEach((name) => {
   const textInput = document.createTextNode("eliminar");
   const tr = document.createElement("tr");
   tr.classList.add("h-12", "hover:bg-gray-100", "text-center");
-
   let nameElement = document.createElement("td");
   nameElement.appendChild(textName);
 
@@ -51,5 +53,6 @@ form.addEventListener("submit", onAction);
 
 submit.addEventListener("click", onAction);
 
-
+}
+export default init
 

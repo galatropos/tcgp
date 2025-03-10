@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link href="/src/styles.css" rel="stylesheet">
-     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Añadir</title>
-  </head>
-  <body>
+   const text=`<div>
     <nav id="nav"></nav>
     <nav class="flex flex-col items-center">
       <div>
@@ -60,7 +52,5 @@
         </thead>
       </table>
     </div>
-    <script type="module" src="/src/type.js"></script>
-    <script type="module" src="/src/nav.js"></script>
-  </body>
-</html>
+  </div>`
+  export default text

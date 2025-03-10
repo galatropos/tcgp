@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <link href="/src/styles.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>añadir carta</title>
-    <body class="flex items-center flex-col">
+
+   const text=`<div class="flex items-center flex-col">
         <div class="flex flex-col items-center gap-8 ">
             <nav  class="flex flex-col items-center gap-8 ">
                 <nav id="nav" ></nav>
@@ -48,10 +42,6 @@
                     <tr class="px-6 py-3"><td>acion</td> <td>No</td><td>Nombre</td><td>expansion</td><td>tipo</td></tr>
                 </thead>
             </table>
-        <script type="module" src="/src/card.js"></script>
-        <script type="module" src="/src/nav.js"></script>
+    </div>`
 
-</body>
-</head>
-   
-</html>
+    export default text   

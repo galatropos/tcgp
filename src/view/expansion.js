@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir</title>
-    <link href="/src/styles.css" rel="stylesheet">
-</head>
-<body >
-    <div class="flex flex-col items-center gap-8 ">
+     const text=`<div class="flex flex-col items-center gap-8 ">
         <nav  class="flex flex-col items-center gap-8 ">
             <nav id="nav" ></nav>
         <div>
@@ -38,15 +29,12 @@
                 <tr><td>acion</td> <td>Nombre</td></tr>
             </thead>
         </table>
-    </div>
+    </div>`
+    export default text
 
     
-    <script type="module" src="/src/expansion.js"></script>
-    <script type="module" src="/src/nav.js"></script>
-
-</body>
 
 
-</html>
+
 
 

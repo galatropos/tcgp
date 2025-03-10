@@ -1,3 +1,7 @@
+import view from "../view/card.js"
+const init=(app)=>{
+  app.innerHTML=view
+
 const submit = document.getElementById("submit");
 const name = document.getElementById("name");
 const no = document.getElementById("no");
@@ -119,3 +123,6 @@ const eliminar = (id ) => {
 
   location.reload();
 };
+
+}
+export default init

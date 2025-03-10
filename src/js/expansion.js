@@ -1,4 +1,8 @@
-const submit=document.getElementById("submit")
+import view from "../view/expansion.js"
+const init=(app)=>{
+  app.innerHTML=view
+
+    const submit=document.getElementById("submit")
 const form=document.getElementById("form")
 const name=document.getElementById("name")
 const table=document.getElementById("table")
@@ -48,3 +52,6 @@ const onAction=(e)=>{
 form.addEventListener("submit",onAction)
 
 submit.addEventListener("click",onAction)
+
+}
+export default init

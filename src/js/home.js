@@ -1,3 +1,9 @@
+import view from "../view/home.js"
+
+const init=(app)=>
+{
+  app.innerHTML=view
+
 
       const expansionStorage = localStorage.getItem("expansion") || "[]";
       const typeComplet = new Object(JSON.parse(localStorage.getItem("type")));
@@ -52,7 +58,7 @@
         const elemenTypeCheckend = document.createElement("input");
         elemenTypeCheckend.setAttribute("type", "checkbox");
         elemenTypeCheckend.setAttribute("checked", "checked");
-        elemenTypeCheckend.setAttribute("onchange", "checkbox(this)");
+        elemenTypeCheckend.addEventListener("change",(e)=>checkbox(e))
         elemenTypeCheckend.classList.add("typeClass");
         elemenTypeCheckend.setAttribute("value", type);
         elemenType.append(labelelemenType, elemenTypeCheckend);
@@ -69,7 +75,7 @@
         const elementExpansionCheckend = document.createElement("input");
         elementExpansionCheckend.setAttribute("type", "checkbox");
         elementExpansionCheckend.setAttribute("checked", "checked");
-        elementExpansionCheckend.setAttribute("onchange", "checkbox(this)");
+        elementExpansion.addEventListener("change",(e)=>checkbox(e))
         elementExpansionCheckend.classList.add("expansionClass");
         elementExpansionCheckend.setAttribute("value", expansion);
 
@@ -257,3 +263,6 @@
 
       CreateData(data, expansion);
       createTable(data);
+
+}
+ export default init
