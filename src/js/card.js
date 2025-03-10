@@ -1,6 +1,7 @@
 import view from "../view/card.js"
 const init=(app)=>{
   app.innerHTML=view
+  document.title = "Cartas"
 
 const submit = document.getElementById("submit");
 const name = document.getElementById("name");

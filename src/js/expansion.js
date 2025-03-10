@@ -1,7 +1,7 @@
 import view from "../view/expansion.js"
 const init=(app)=>{
   app.innerHTML=view
-
+  document.title = "Expansión"
     const submit=document.getElementById("submit")
 const form=document.getElementById("form")
 const name=document.getElementById("name")

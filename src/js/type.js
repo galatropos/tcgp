@@ -1,7 +1,7 @@
 import view from "../view/type.js"
 const init=(app)=>{
   app.innerHTML=view
-
+  document.title = "Nivel"
   const submit = document.getElementById("submit");
 const name = document.getElementById("name");
 const money = document.getElementById("money");
