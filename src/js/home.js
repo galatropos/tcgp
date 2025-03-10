@@ -3,7 +3,7 @@ import view from "../view/home.js"
 const init=(app)=>
 {
   app.innerHTML=view
-  document.title = "Bioenvenido"
+  document.title = "Bienvenido"
 
       const expansionStorage = localStorage.getItem("expansion") || "[]";
       const typeComplet = new Object(JSON.parse(localStorage.getItem("type")));
