@@ -61,7 +61,10 @@ const init=(app)=>
         elemenTypeCheckend.addEventListener("change",(e)=>checkbox(e))
         elemenTypeCheckend.classList.add("typeClass");
         elemenTypeCheckend.setAttribute("value", type);
-        elemenType.append(labelelemenType, elemenTypeCheckend);
+        elemenType.append(
+          elemenTypeCheckend,
+          labelelemenType,
+        );
 
         filterTipo.append(elemenType);
       });
@@ -80,8 +83,8 @@ const init=(app)=>
         elementExpansionCheckend.setAttribute("value", expansion);
 
         elementExpansion.append(
+          elementExpansionCheckend,
           labelelementExpansion,
-          elementExpansionCheckend
         );
         filterExpansiones.append(elementExpansion);
       });
