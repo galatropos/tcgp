@@ -15,7 +15,11 @@ let optionExpansion;
 const expansionStorage = localStorage.getItem("expansion") || "[]";
 const espansionSet = new Set(JSON.parse(expansionStorage));
 const typeObject = new Object(JSON.parse(localStorage.getItem("type")));
-const cardObject = new Object(JSON.parse(localStorage.getItem("card")));
+let cardObject = new Object(JSON.parse(localStorage.getItem("card")));
+
+
+let filter=Object.entries(cardObject).sort( ([_,a], [__,b])=>(a.expansion.localeCompare(b.expansion) || a.no.localeCompare(b.no)));
+cardObject=Object.fromEntries(filter)
 
 espansionSet.forEach((name, e, s, i) => {
   const entries = espansionSet.entries().next().value[0];

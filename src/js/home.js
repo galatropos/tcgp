@@ -7,7 +7,7 @@ const init=(app)=>
 
       const expansionStorage = localStorage.getItem("expansion") || "[]";
       const typeComplet = new Object(JSON.parse(localStorage.getItem("type")));
-      const card = new Object(JSON.parse(localStorage.getItem("card")));
+      let card = new Object(JSON.parse(localStorage.getItem("card")));
       const expansionComplet = new Set(JSON.parse(expansionStorage));
       const table = document.getElementById("table");
       const noTotal = document.getElementById("noTotal");
@@ -42,8 +42,11 @@ const init=(app)=>
       let data = dataOrigin.map((e) => e);
       let expansion = expansionOrigin.map((e) => e);
       let type = typeOrigin.map((e) => e);
+      //ordenamiento de cartas
 
-      ///// creacion de filter
+      let filter=Object.entries(card).sort( ([_,a], [__,b])=>(a.expansion.localeCompare(b.expansion) || a.no.localeCompare(b.no)));
+      card=Object.fromEntries(filter)
+///// creacion de filter
       const filterExpansion = Array.from(
         new Set(dataOrigin.map(({ expansion }) => expansion))
       );
